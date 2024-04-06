@@ -1,5 +1,9 @@
 public class NewBranchTest {
+    public static void OneMoreHello(){
+        System.out.println("New class for new branch-New class for new branch");
+    }
+
     public static void main(String[] args) {
-        System.out.println("New class for new branch");
+        OneMoreHello();
     }
 }
