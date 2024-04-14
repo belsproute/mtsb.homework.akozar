@@ -5,6 +5,4 @@ public class Cat extends Pet {
         super(name, breed, cost, character);
     }
 
-
-
 }

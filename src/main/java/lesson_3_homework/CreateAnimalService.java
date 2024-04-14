@@ -17,18 +17,34 @@ public interface CreateAnimalService {
 
         while (i < ANIMALS_COUNTER)
         {
-            switch (animalType.get(new Random(4).nextInt())){
+            switch (animalType.get(new Random().nextInt(4))){
                 case "CAT" :
-                    System.out.println(new Cat("1", "1", 100f, "1"));
+                    Cat newCat = new Cat(animalName.get(new Random().nextInt(animalName.size())),
+                            animalBreed.get(new Random().nextInt(animalBreed.size())),
+                            new Random().nextInt(10000),
+                            animalChar.get(new Random().nextInt(animalChar.size())));
+                    System.out.println("Created Cat " + newCat.getName() + " with a " + newCat.getCharacter() + " character");
                     break;
                 case "DOG":
-                    System.out.println(new Dog("2", "2", 100f, "2"));
+                    Dog newDog = new Dog(animalName.get(new Random().nextInt(animalName.size())),
+                            animalBreed.get(new Random().nextInt(animalBreed.size())),
+                            new Random().nextInt(10000),
+                            animalChar.get(new Random().nextInt(animalChar.size())));
+                    System.out.println("Created Dog " + newDog.getName() + " with a " + newDog.getCharacter() + " character");
                     break;
                 case "SHARK":
-                    System.out.println(new Shark("3", "3", 100f, "3"));
+                    Shark newShark = new Shark(animalName.get(new Random().nextInt(animalName.size())),
+                            animalBreed.get(new Random().nextInt(animalBreed.size())),
+                            new Random().nextInt(10000),
+                            animalChar.get(new Random().nextInt(animalChar.size())));
+                    System.out.println("Created Shark " + newShark.getName() + " with a " + newShark.getCharacter() + " character");
                     break;
                 case "WOLF":
-                    System.out.println(new Wolf("4", "4", 100f, "4"));
+                    Wolf newWolf = new Wolf(animalName.get(new Random().nextInt(animalName.size())),
+                            animalBreed.get(new Random().nextInt(animalBreed.size())),
+                            new Random().nextInt(10000),
+                            animalChar.get(new Random().nextInt(animalChar.size())));
+                    System.out.println("Created Wolf " + newWolf.getName() + " with a " + newWolf.getCharacter() + " character");
                     break;
         }
             i++;
